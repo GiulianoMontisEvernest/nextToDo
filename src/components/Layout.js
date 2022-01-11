@@ -1,5 +1,9 @@
 import Head from 'next/head';
 
+// components
+import Navigation from './Navigation';
+import Footer from './Footer';
+
 const Layout = ({ children }) => {
   return (
     <div>
@@ -7,9 +11,13 @@ const Layout = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="simple todo app to learn next.js" />
       </Head>
-      <header>navigation</header>
+      <header>
+        <Navigation />
+      </header>
       <main>{children}</main>
-      <footer>footer</footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };
