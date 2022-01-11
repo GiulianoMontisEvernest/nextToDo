@@ -8,6 +8,7 @@ import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
 import { SWRConfig } from 'swr';
 import { swrFetcher } from '../src/config/swrFetcher';
+import { AppProvider } from '../src/context/context';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -24,7 +25,9 @@ export default function MyApp(props) {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <SWRConfig value={{ swrFetcher }}>
-          <Component {...pageProps} />
+          <AppProvider>
+            <Component {...pageProps} />
+          </AppProvider>
         </SWRConfig>
       </ThemeProvider>
     </CacheProvider>
