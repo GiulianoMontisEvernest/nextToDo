@@ -18,7 +18,7 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 
 // components
-import StyledNavLink from './StyledNavLink';
+import StyledNavLink from './StyledNavLink/StyledNavLink';
 
 // variables
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];

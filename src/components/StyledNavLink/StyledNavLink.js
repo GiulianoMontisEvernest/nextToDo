@@ -1,10 +1,5 @@
 import Link from 'next/link';
-import styled from '@emotion/styled';
-
-const StyledLink = styled.a`
-  color: inherit;
-  text-decoration: none;
-`;
+import { StyledLink } from './styled';
 
 function NavLink({ href, name }) {
   return (

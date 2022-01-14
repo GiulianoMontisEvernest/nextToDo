@@ -6,7 +6,7 @@ import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="simple todo app to learn next.js" />
@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
       <footer>
         <Footer />
       </footer>
-    </div>
+    </>
   );
 };
 
