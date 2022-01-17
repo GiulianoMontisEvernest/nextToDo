@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // mui
 import {
@@ -15,8 +16,9 @@ import {
 
 // components
 import Layout from '../src/components/Layout';
+import StyledNavLink from '../src/components/StyledNavLink/StyledNavLink';
 
-export default function Index() {
+export default function Home() {
   return (
     <div>
       <Layout>
@@ -26,26 +28,55 @@ export default function Index() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <Container className="Home_titles">
-          <Typography variant="h1">StuffToDo()</Typography>
-          <Typography variant="h2">
-            StuffToDo helps you keeping things under control
+        <Container
+          sx={{
+            p: 3,
+            minHeight: '40vh',
+            display: 'flex',
+            flexFlow: 'column noWrap',
+            justifyContent: 'center',
+            alignItems: 'center',
+            fontFamily: 'monospace',
+          }}
+        >
+          <Typography
+            variant="h1"
+            sx={{ padding: '2rem 2.5rem 1rem 2.5rem', fontFamily: 'monospace' }}
+          >
+            StuffToDo()
+          </Typography>
+          <Typography variant="h4" sx={{ padding: '0 2.5rem' }}>
+            StuffToDo( ) helps you to keep things under control
           </Typography>
 
-          <Box className="btn_callForAction">
-            <Link href="/dashboard">
-              <Button>Start your first Dashboard</Button>
-            </Link>
-          </Box>
+          <Button color="primary" variant="contained" sx={{ my: 2 }}>
+            <StyledNavLink href={'/dashboard'} name={'Dashboard'} />
+          </Button>
           <hr />
         </Container>
 
-        <Container className="Home_instructions">
+        <Container
+          sx={{
+            p: 3,
+            minHeight: '40vh',
+            display: 'flex',
+            flexFlow: 'column noWrap',
+            justifyContent: 'space-around',
+            alignItems: 'center',
+            textAlign: 'center',
+          }}
+        >
           <Typography variant="h4">
             You do not know how to use it? <br />
             No problem take a look here:
           </Typography>
-          <List className="instructions">
+          <List
+            className="instructions"
+            sx={{
+              fontFamily: 'monospace',
+              textAlign: 'center',
+            }}
+          >
             <ListItem>
               <ListItemText>
                 Structure your tasks into lists in your head or a piece of paper
