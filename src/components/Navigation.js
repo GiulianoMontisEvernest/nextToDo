@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Link from 'next/link';
 
 // mui
 import AppBar from '@mui/material/AppBar';
@@ -90,6 +89,9 @@ const ResponsiveAppBar = () => {
               <MenuItem onClick={handleCloseNavMenu}>
                 <StyledNavLink href={'/dashboard'} name={'Dashboard'} />
               </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <StyledNavLink href={'/gallery'} name={'Gallery'} />
+              </MenuItem>
             </Menu>
           </Box>
           <Typography
@@ -112,6 +114,12 @@ const ResponsiveAppBar = () => {
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
               <StyledNavLink href={'/dashboard'} name={'Dashboard'} />
+            </Button>
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              <StyledNavLink href={'/gallery'} name={'Gallery'} />
             </Button>
           </Box>
 
