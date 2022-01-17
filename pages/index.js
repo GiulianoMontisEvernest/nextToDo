@@ -1,12 +1,8 @@
 import Head from 'next/head';
-import Link from 'next/link';
-import Image from 'next/image';
 
 // mui
 import {
-  CssBaseline,
   Container,
-  Box,
   Button,
   Typography,
   List,
