@@ -92,6 +92,9 @@ const ResponsiveAppBar = () => {
               <MenuItem onClick={handleCloseNavMenu}>
                 <StyledNavLink href={'/gallery'} name={'Gallery'} />
               </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <StyledNavLink href={'/blog'} name={'Blog'} />
+              </MenuItem>
             </Menu>
           </Box>
           <Typography
@@ -120,6 +123,12 @@ const ResponsiveAppBar = () => {
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
               <StyledNavLink href={'/gallery'} name={'Gallery'} />
+            </Button>
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              <StyledNavLink href={'/blog'} name={'Blog'} />
             </Button>
           </Box>
 
